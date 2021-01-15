@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main()
+{
+    int num =0;
+    //随机生成数
+    srand(time(0));//为了使生成数字看上去更像随机数
+    int a = rand();//获取到随机数
+    a=a%100+1;//获取到1~100的随机数
+
+
+    while(num!=a){
+        printf("输入一个数：\n");
+        scanf("%d",&num);
+        if(num<a){
+            printf("你输入的数字小了\n");
+        }else{
+            printf("你输入的数字大了\n");
+        }
+    }
+    printf("恭喜你，答对了，数字就是：%d\n",a);
+    //printf("%d",a);
+    return 0;
+}
