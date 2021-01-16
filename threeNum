@@ -1,0 +1,27 @@
+#include<stdio.h>
+//给定一个不超过6的整数，然后通过这个整数a，以及他连续的3个整数，组成一个三位数。
+int main()
+{
+
+    int a;
+    int num;
+    printf("please input the number of a:\n");
+    scanf("%d",&a);
+    int i,j,k;
+    i = a;
+    while(i<a+4&&a<6){
+
+            j=a;
+        while(j<a+4){
+            k= a;
+            while(k<a+4){
+                num = i*100+j*10+k;
+                k++;
+                printf("the num is %d\n",num);
+            }
+            j++;
+        }
+        i++;
+    }
+    return 0;
+}
