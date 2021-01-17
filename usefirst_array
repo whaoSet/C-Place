@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+int main()
+{
+    /*循环输入数字，使其加入到数组中，我们计算平均数，然后把大于平均数的
+    数字打印出来*/
+    int x=0;//寄存输入的数字
+    double sum =0;//求和
+    int cnt=0;//计数
+    int number[100];//存放的数组
+    scanf("%d",&x);
+    while(x!=-1){
+        number[cnt] = x;
+        sum += x;
+        cnt++;
+        scanf("%d",&x);
+    }
+    //这样数组就保存了所有的数字
+    for(int i =0;i<cnt;i++){
+        printf("%d \n",number[i]);
+    }
+    //判断是否超过平均值
+    double average =sum/cnt;
+
+    for(int j =0;j<cnt;j++){
+        if(average<=number[j]){
+            printf("%d \n",number[j]);
+        }
+
+    }
+    return 0;
+
+
+}
